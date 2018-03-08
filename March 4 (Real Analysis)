@@ -1,0 +1,33 @@
+OP:
+I'm currently reading a section of Stephen Abbott's *Understanding Analysis* and I'm struggling to understand the following concept which I will explain below 
+
+Firstly, recall the following definitions:
+
+>$\ $1) Given $b$ $\in\mathbb{R}$ and $\epsilon>0$ the $\epsilon$-*neighbourhood* of $b$ is the set:$ \ $
+
+>$$V_{\epsilon}(b)=\{x\in\mathbb{R}:|x-b|<\epsilon\}$$
+
+>$\ $In other words, $V_{\epsilon}(b)$ is the open interval $(b-\epsilon,b+\epsilon)$ centered at $b$ with radius $\epsilon.$
+
+>$\ $2) A set $O\subseteq\mathbb{R}$ is *open* if for all points $b\in O$ there exists an $\epsilon$-neighbourhood $V_{\epsilon}(b)\subseteq O.$
+
+Just so there is no ambiguity here (which I'm sure there won't be given the definition), $\subseteq$ is referring to a *proper subset*.
+
+The author gives the following example of an open interval:
+
+>$$(c,d)=\{x\in\mathbb{R}:c<x<d\}$$
+
+With the following explanation:
+
+"To see that$ \ (c,d)\ $is open in the sense just defined [above], let $ \ x\in(c,d) \ $be arbitrary. If we take $ \ \epsilon=min\{x-c,d-x\}, \ $then it follows that $V_{\epsilon}(x)\subseteq (c,d).$ It is important to see where the argument breaks down if the interval includes either one of its endpoints."
+
+**My question:**
+
+
+I'm assuming the choice of $ \ \epsilon=min\{x-c,d-x\} \ $was due to the fact that we know:
+>$$x>c, x<d$$
+
+Therefore $ \ x-c \ $ will be the *distance* between $ \ x $ and $ c \ $(likewise for $ \ d-x $ being the distance between $ \ x $ and $ d \ $), but why is it necessary to choose the minimum from the set of these distances for $ \epsilon? \ $
+
+Answer:
+Yes, you are correct, due to transitivity, $c < d$. In addition, we need to choose the minimum distance because we want $V_\epsilon(x)\subseteq(c,d)$. If $c$ is $3$, $d$ is $6$ and let $x$ be $5$, if we don't choose the minimum of the two distances and instead choose the distance $x-c=2$, then the open interval $(3,7)$ obviously fails the criteria. I believe it is trivial to see that choosing the minimum distance works. Hence, choosing the minimum works and not choosing the minimum doesn't and that's why we do choose the minimum.
