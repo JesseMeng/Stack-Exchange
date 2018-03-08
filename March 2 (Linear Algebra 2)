@@ -1,0 +1,14 @@
+OP:
+Is the following Proof Correct?
+
+>  Given that $T\in\mathcal{L}(\mathbf{R}^2)$ defined by $T(x,y) =
+ (-3y,x)$. $T$ has no eigenvalues.
+
+*Proof.* Let $\sigma_T$ denote the set of all eigenvalues of $T$ and assume that $\sigma_T\neq\varnothing$ then for some $\lambda\in\sigma_T$ we have $T(x,y) = \lambda(x,y) = (-3y,x)$ where $(x,y)\neq (0,0)$, equivalently $\lambda x = -3y\text{ and }\lambda y = x$. but then $\lambda(\lambda y) = -3y$ equivalently $y(\lambda^2+3) = 0$. The equation $\lambda^2+3 = 0$ has no solutions in $\mathbf{R}$ consequently $y=0$ and then by equation $\lambda y  = x$ it follows that $x=0$  thus $(x,y) = (0,0)$ contradicting the fact that $(x,y)\neq (0,0)$.
+
+$\blacksquare$
+
+Answer:
+Proof looks correct to me. Though you could have also just added the case for $\lambda$ is zero since otherwise to multiply both sides by $0$ would reduce the solution set for $x$ and $y$.
+
+$Edit:$ The case is not necessary as you are actually using substitution instead of multiplying both sides by $\lambda$.
