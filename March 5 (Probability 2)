@@ -1,0 +1,10 @@
+OP:
+> Let's say there is a balloon that blows if it gets a hard hit or 2 medium hits. During a party, if a kid  hitsthe balloon, he has $\frac{1}{4}$ probability getting a hard hit on the balloon and $\frac{1}{4}$ probability for a medium hit and $\frac{1}{2}$ probability of missing the hit. If $4$ kids consecutively hit the balloon(a kid can hit only one time), what's the probability of the balloon to blow?
+
+>All hits are independent.
+
+Any hint would be valuable.
+
+Answer:
+Try consider: number of hard hits cannot exceed one, and the number of medium hits cannot exceed $2$. You can solve this question by dividing it into cases.
+Another hint: consider the probability of balloon not blowing? You then have to rule out hard hits or $>1$ medium hits.
