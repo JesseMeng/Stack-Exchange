@@ -1,0 +1,11 @@
+OP:
+This problem is a variation from the problem:
+> Determine the number of permutations of {1,2,...,9} in which at least one odd integer is in its natural position.
+
+I know how to solve the original problem. However, after changing "at least one odd integer is in its natural position" to "exactly one odd integer is in its natural position", the new problem seems a lot harder. I can't figure out a nice way to count the number of permutations. I attempted to define $A_i$ as "only odd number i is in its natural position", but then the problem is that after fixing an odd number, there seems no nice way to count the number of permutations of the rest 8 numbers since we can't simply apply derangement formula. Can anyone help?
+
+Answer:
+Here is how you can use the original question to assist you:
+Since you know the number of permutations in which at least one odd integer is in its natural position, you could do a subtraction from all of the permutations to get the number of permutations in which no odd integer is in its natural position.
+Then, you can use the algorithm above to solve your question as follows:
+there are five very similar cases: when exactly one of $1,3,5,7,9$ is in its natural position. You would just fix that number, and determine the number of permutations of the other $8$ integers such that no odd integer is in its natural position. Then add up all $5$ cases to get the result.
