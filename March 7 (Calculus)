@@ -1,0 +1,51 @@
+OP:
+This question comes from the proof of the derivative of a composite function which I lifted straight from Proof Wiki 
+
+https://proofwiki.org/wiki/Derivative_of_Composite_Function:
+
+Let $f, g, h$ be continuous real functions such that: $\forall x \in \mathbb R: h \left({x}\right) = f \circ g \left({x}\right) = f \left({g \left({x}\right)}\right)$ 
+
+Then: $h' \left({x}\right) = f' \left({g \left({x}\right)}\right) g' \left({x}\right)$ 
+
+where $h'$ denotes the derivative of $h$.
+
+Proof:
+
+Let $g \left({x}\right) = y$, and let
+
+$g(x+δx) 	=	y+δy$
+
+Thus: 
+
+Thus:
+
+$δy→0\ \ \ \ \ $   as    $\  \ \ \ \ δx→0$
+
+and:
+
+$\frac{δy}{δx}→g′(x) \ \ \ \ \ \ \ \ \ (1)$
+
+Case 1:
+
+Suppose $g′(x)≠0$ and that $δx$ is small but non-zero.
+
+Then $δy≠0$ from (1) above, and:
+
+$lim_{δx→0} \frac{h(x+δx)−h(x)}{δx}	=				lim_{δx→0}\frac{f(g(x+δx))−f(g(x))}{g(x+δx)−g(x)}$ $\frac{g(x+δx)−g(x)}{δx}$				
+=				$lim_{δx→0}\frac{f(y+δy)−f(y)}{δy}$ $\frac{δy}{δx}$				
+=				$f′(y)g′(x)$
+
+My question: Why does the assumption that $g'(x)$ $\neq$ $0$ imply that $dy$ $\neq$ $0$ and why does this in turn imply that the expression $\ \ \ \ \ lim_{δx→0} \frac{h(x+δx)−h(x)}{δx}\ \ \ \ \ $      
+
+is equal to $\ \ \ \ \ \ \ \ \ \ \ \ \ \ lim_{δx→0}\frac{f(g(x+δx))−f(g(x))}{g(x+δx)−g(x)}\frac{g(x+δx)−g(x)}{δx}$		
+
+Answer:
+If $g'(x)$ $\neq$ $0$ 
+
+Since $g'(x) = \frac{dy}{dx}$, and we have also assumed $dx$ is small but non-zero. So, the product of two non-zero values yield non-zero result.  implies that $dy$ $\neq$ $0$
+
+Since $dy$ $\neq$ $0$, by our definition of $dy$, we know this is equivalent to saying  ${g(x+δx)−g(x)}$$\neq$ $0$. Then, this means it's valid to multiply top and bottom of the fraction by ${g(x+δx)−g(x)}$. Which in turn yields:
+ 
+The expression$\ \ \ \ \ lim_{δx→0} \frac{h(x+δx)−h(x)}{δx}\ \ \ \ \ $      
+
+is equal to $\ \ \ \ \ \ \ \ \ \ \ \ \ \ lim_{δx→0}\frac{f(g(x+δx))−f(g(x))}{g(x+δx)−g(x)}\frac{g(x+δx)−g(x)}{δx}$	
