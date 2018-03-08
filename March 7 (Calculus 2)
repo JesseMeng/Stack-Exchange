@@ -1,0 +1,23 @@
+OP:
+Question one:
+> The derivative of function $f$ at the point where $x=t$ is defined by the following two equivalent limit expressions:
+$$\lim_{x\to t} \frac{f(x)-f(t)}{x-t}$$
+$$\lim_{h\to0} \frac{f(t+h)-f(t)}{h}$$
+
+I understand the first expression - same as basic algebra (change in $y$ over change in $x$).
+
+Yet I don't get how the second expression is equivalent really. I'm just starting with derivatives so yeah if someone could explain it to me, that would be lovely.
+
+Question two:
+> Lets substitute $f(x)=\frac{1}{x}$ and $t=1$ into the second expression to find the appropriate limit expression for $f'(1)$.
+This returns end result:
+$$\lim_{h\to0} \frac{\frac{1}{1+h}-1}{h}$$
+
+So even if I would understand how on the first two questions the expressions are equivalent, how is a function of $f(x)=\frac{1}{x}$ and $t=1$ have anything to do with that end result...
+
+Thanks in advance for any clearance on the subject.
+
+Answer:
+$Q1$: Ok, suppose you have points $(t, y1), (x,y2)$, without loss of generality, let $x>t$, since we want distinct points on the function. Then let $h$ denote this horizontal distance, then the two points translate to $(t, f(t)), (t+h,f(t+h))$, the slope of the secant line between the two points is $$ \frac{f(t+h)-f(t)}{h}$$Note the derivative is the slope of the tangent line at one given point, and hence if we want the slope at $x=t$, then we want the secant line to move closer, infinitely close so that it becomes  a tangent line. Thus, we want to make their horizontal distance infinitely small. Which means we want to limit $h$ to $0$. Hence we have the formula $$\lim_{h\to0} \frac{f(t+h)-f(t)}{h}$$
+
+To understand the second question, I think you can go back to my explanation of the formula for $Q1$, since one of the points started at $x=t$, we would need the y value when calculating slope, which is why it matters what value the function has at that point. $Q2$ is highly dependent on your understanding on $Q1$, hope that my explanation for $Q1$ can help with your understanding with $Q2$.
