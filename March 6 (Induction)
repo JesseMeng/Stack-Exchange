@@ -1,0 +1,18 @@
+OP:
+true for base case $n = 3$, and assume true for $n=k$, then
+
+for $k \geq 3$,
+$$2k+1 \leq 2^{k}$$
+$$2k+1 + 2 \leq 2^{k} +2$$
+$$2(k+1) +1 \leq 2^{k} +2$$
+since, $2^{k} +2 \leq 2^{k}\cdot2$, (requires another proof?)
+
+then,
+
+$$2(k+1) +1 \leq 2^{k} +2 \leq 2^{k}*2$$
+$$2(k+1) +1  \leq 2^{k+1}$$
+
+but i think i have to prove the since part $2^{k} +2 \leq 2^{k}\cdot2$, another proof to prove in this proof?
+
+Answer:
+You are trying to prove $2n+1 < 2^n$. So I think you should set your induction case to be assume $2k+1 < 2^k$, there should be a strict inequality. Next, what you did was correct, you have $2(k+1)+1 < 2^k+2$. Since $2^{k+1}=2^k+2^k$ and $2^k>=8>2$. You should have $2(k+1)+1 < 2^k+2<2^{k+1}$. No need for another proof. You are done.
