@@ -1,0 +1,19 @@
+OP:
+Good evening guys, I have little problem, I have to calculate how many days do I have between two dates which contains specific day, month and even year, do you guys have any idea how should I do that? Is there any formula, every formula was containing only month and year but not day... 
+
+By the way I dont know which tag should I give....
+
+Answer:
+For the Gregorian Calender:
+
+1 common year = 365 days
+
+One calendar leap year has 366 days:
+
+
+
+Leap year occures every 4 years, except for years that are divisable by 100 and not divisable by 400.
+
+Using this, you should be able to compute the number of days between two dates. Of course,  you can use this to get a formula:
+
+Given date1 = $(d1, m1, y1)$ and date2 = $(d2, m2, y2)$. Let date 2 be the later date. Then the number of days = $\sum(365n1+366n2$ $+(d2-d1)$+$d(\delta m))$. Where $n1$ and $n2$ are the number of normal years and leap years between the two dates and $d(\delta m)$ gives the difference in days caused by the difference in months, which could vary depending on the year and month. 
