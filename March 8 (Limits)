@@ -1,0 +1,11 @@
+OP:
+How can I solve this:
+
+$$\lim\limits _{x\to \infty \:}\frac {\ln (x^3+x^2+2)}x$$
+
+Thanks!
+
+Answer:
+**HINT**
+
+ $\ln(x^3+x^2+2) <\ln(x^4)=4\ln(x)$ for large $x$
