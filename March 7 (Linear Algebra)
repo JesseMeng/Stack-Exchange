@@ -1,0 +1,12 @@
+OP:
+$Ax=b$, $A$ is a $n\times m$ matrix ,and $x$ is $m\times 1$ matrix,and $b$ is $n\times 1$ matrix.Now let $C =[A|b ]$
+
+ 1. When $m<n$ , we only have a solution when $\text{rank}(A)=m$ and $\text{rank}(A)=\text{rank}(C)$, why is $\text{rank}(A)=m$ ,not $=n$? The reason I wonder is that $n$ is the number of rows and the rank is the number of non-zero rows.
+ 2. When $m>n$,there is no solution when $\text{rank}(A)=\text{rank}(C)$,can anyone give me an example?
+ 
+ Answer:
+ The rank of the matrix is the dimension of its row space/column space. Note that the dimension of row space is always equal to the dimension of column space. So, since $A$ is a $n*m$ matrix, and we know $m<n$, then we know the rank of the matrix $A$ is at most $min\{n,m\}=m$. Since the column space dimension is upper bounded by $m$. This is why $rank(A)=m$. Rank is not necessarily the number of non-zero rows. Suppose you have a $2*2$ matrix where $row_1$ and $row_2$ are both nonzero and are equal, then the rank is not $2$ since the two rows are not independent. Rank is the actually the maximum number of independent rows(dimension of row space).
+
+For question $2$:
+$A$=$\begin{bmatrix} 1&1&1 \\ 1&1&1\end{bmatrix}$
+$C$=$\begin{bmatrix} 1&1&1|2 \\ 1&1&1|2\end{bmatrix}$. Note $m>n$, and $rank(A)=rank(C)$=$1$. But there are solutions, so your statement is incorrect.
