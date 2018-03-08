@@ -1,0 +1,5 @@
+OP:
+I have to prove that. While I know this is true by thinking about it I'm having a lot of trouble actually writing the proof
+
+Answer:
+The easiest and most intuitive way is probably to draw a diagram of the 3 sets. Showing the intersection areas between each pair of the sets and the intersection of all three sets. Once you have the diagram and it is clear why this formula is true, it should be easy to write a full proof from there.
