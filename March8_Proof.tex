@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 8, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : How to prove an implication within an if and only if
+
+Suppose you need to prove that $A\iff (B\implies C)$.
+
+The two ways to prove this are:
+
+---
+
+(1a): Suppose $A$ and $B$ are true. Prove that $C$ is true.
+
+(1b): Suppose $B$ and $C$ are true. Prove that $A$ is true.
+
+---
+
+(2a): Suppose $A$ and $B$ are true. Prove that $C$ is true.
+
+(2B): Suppose $A$ is not true and B is true, prove that $C$ cannot be true.
+
+---
+
+Are these ways correct? I always get confused what you can assume and what you have to prove when there's multiple implications and such in one statement.
+\section{My Solution}
+Prove both directions:
+
+Forward: assume A, prove ($B \implies $C). This means "suppose A and B are true. Prove that C is true".
+
+Reverse: Assume ($B \implies $C), prove A. So, you don't  "Suppose B and C are true. Prove that A is true". Instead, "suppose the truth of B implies truth of C, then prove that A is true. **$1b$ is incorrect**.
+Now, reverse can also be interpreted as suppose A is not true, prove ($B \implies $C) is not true by the contrapostive. Which means prove $B$ is true and $C$ is false. So you don't "Suppose A is not true and B is true, prove that C cannot be true." Instead, "Suppose A is not true, prove B is true and prove that C cannot be true." **$2b$ is incorrect.**
+\end{document}

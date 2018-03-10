@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 9, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : I am having trouble understanding how to prove that the sum of the first $n$ positive even integers is $n^2 + n$ using strong induction.
+
+> Show the sum of the first $n$ positive even integers is $n^2 + n$ using strong induction.
+
+I can't solve the above problem using strong induction. It will be very helpful if I can get the solution. Thanks in advance.
+\section{My Solution}
+Basic case is trivially true.
+
+Now assume the sum of the first k positive even integers is $k^2+k$ for all values $1,2,...k_0$
+
+Then we know that the $(k_0+1)^{th}$ even integer is $2k_0+2$, summing that with the first $k_0$ positive even integers yields $k_0^2+3k_0+2=(k_0+1)^2+(k_0+1)$
+
+By the principles of strong induction, the formula is correct. However, strong induction is not necessary in this case as you can easily derive this formula with a summation.
+\end{document}

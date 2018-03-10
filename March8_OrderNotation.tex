@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 8, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+I am bit confused on the application of the logarithm rules when it comes to using them to determine the order of growth. 
+
+For example:
+
+1. $ 2^{\log 2n} + 4n = \Theta(2^n) $ 
+
+2. $ 2^{2\log 2n} + 4n = \Theta(n^2) $ 
+
+3. $ n\log n + 10n^2 + 5^{\log n} = \Theta(n^{\log 5}) $ 
+
+4. $ n^{\log n} + 4^{(\log n)^2} = \Theta(n^{\log n^2}) $ 
+
+Which logarithm rules apply to the above? How exactly are they solved? And how can I determine the order of growth for these types of questions when doing them in the future?
+
+NB: The log is in base 2
+
+ 
+\section{My Solution}
+Your first rule is incorrect:
+
+For example, the logarithms in computer science are in base $2$.
+So:
+
+1. $ 2^{\log 2n} + 4n = \Theta(2^n) $ can be simplified to $$6n= \Theta(2^n)$$ which is false as $6n$ grows slower.
+
+The second rule is proven as follows:
+$$2^{2 \log_2(2n)}=\left(2^{\log_2(2n)^2}\right)=(2n)^2=4n^2=\Theta(n^2)$$
+
+Proof of third rule:
+
+$n\log(n)$ is insignificant compared to $n^2$.
+$$5^{\log n}=5^\frac{\log_5(n)}{\log_5(2)}=n^\frac{1}{\log_5(2)}=n^{\log_2(5)}$$
+$n^2$ is insignificant compared to $n^{\log(5)}$. Hence we have arrived at our conclusion.
+
+Proof of fourth rule:
+$$4^{(\log n)^2}=2^{2{(\log n)^2}}=((2^{\log n})^{logn})^2=n^{(\log n^2)}$$
+$n^{\log(n)}$ is insignificant compared to $n^{(\log n^2)}$, we have arrived at our conclusion.
+
+Note that these rules all proven with the basic properties of $\log$, such as converting bases. You should sharpen on those fundamentals.
+\end{document}

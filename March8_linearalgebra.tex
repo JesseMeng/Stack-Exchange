@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 8, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Finding a matrix that meets conditions of a nullspace
+
+Construct a non-zero matrix $A$ with the required property or explain why that is impossible:  
+
+a) The range of $A$ contains $(1, −1, −1)^T$ and $(−1, 1, 2)^T$, and nullspace of $A$ is $\{(s−t, s+t,s)^T|s, t \in R\}$.  
+
+I've been pondering this for a bit, and if I understand it correctly, this is saying the following:
+
+$\begin{bmatrix}a & 1 &-1\\b & -1 & 1\\c & -1 & 2 \end{bmatrix}$$  \begin{bmatrix} s+t \\ s-t \\s \end{bmatrix}= \begin{bmatrix} 0\\ 0 \\0 \end{bmatrix}$
+
+This seems like a rather cumbersome system to solve.
+\section{My Solution}
+In short, this is impossible, since it is asking you to construct a matrix where nullity is $2$ and range is at least $2$. Then, this implies $n=3\geq 4$ from rank-nullity theorem. A contradiction.
+
+Moreover, we know range is a vector space, so range must contain $2*(1,-1,-1)+(-1,1,2)=(1,-1,0)$. Now the nullspace also contains $(1,-1,0)$, by setting $s=0$ and $t=-1$. However, the nullspace and range of a linear transformation should not contain any non-trivial vector in its intersection.
+\end{document}
