@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 8, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : How to solve lim x-> inf
+
+How can I solve this:
+
+$$\lim\limits _{x\to \infty \:}\frac {\ln (x^3+x^2+2)}x$$
+
+Thanks! 
+\section{My Solution}
+**HINT**
+
+ $\ln(x^3+x^2+2) <\ln(x^4)=4\ln(x)$ for large $x$
+\end{document}
