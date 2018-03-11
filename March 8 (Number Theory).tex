@@ -1,4 +1,17 @@
-OP:
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 8, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Finding smallest nonnegative integer x in a modulo equation
+
 -36789 = x mod 19
 
 So what I have done is the following
@@ -13,6 +26,6 @@ But I am unsure if the final answer is correct, as I am new to this modulo arith
 I have read online modulo arithmetic, but unable to find a scenario like the above question.
 
 The typical example is -36789 mod 19 = 14 (which the assumed final answer)... 
-
-Answer:
+\section{My Solution}
 You are looking for the smallest non-negative value for $-36789+19n$, because that is equivalent to the $-36789$ $mod$ $19$. Therefore, it is clear that when $n<1937$, $-36789+19n <0$, when $n>1937$, $-36789+19n >0$ and $-36789+19n$  is strictly increasing. Hence, $1937$ is the value for n that will create the smallest non-negative value for $-36789+19n$. Consequently, $-36789+19*1937=14$.
+\end{document}
