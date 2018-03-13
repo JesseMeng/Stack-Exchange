@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 11, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Without Replacement; Hypergeometric / With replacement: Binomial
+
+***I have read this statement :***
+
+Trials are independent (i.e. use binomial) if sampling is done with replacement.
+    
+Trials are dependent (i.e. use hypergeometric) if sampling is done without replacement from a known population size.
+
+Can someone explain it /proove it ? 
+
+Thanks 
+\section{My Solution}
+To explain the statements, consider with replacement first. If you have "with replacement", it means no matter what you do in that trial, the next trial is going to have the same starting condition as your previous trial. Hence, the probability of your outcomes is the same. This means they are independent of each other: your previous outcome has no affect on the conditions of the next trial. 
+
+If you have "without replacemnt", this means the outcome you have in one trial affects the next as the ending condition of a trial is the same as the starting condition of the next trial. Hence, the trials are dependent.
+
+As an example, if you have one red ball and one blue ball and you are trying to take a random ball out of it. Probability is obviously $0.5$ for the first trial. Now, if you have replacement, you are guaranteed to go back to the condition that you have two balls in each trial, so probability is the same for each trial=$0.5$. However, if I don't replace the first ball that I take, then my next pick will be $100$% for the ball that is still left and $0$% for the ball already taken. Hence trials are dependent.
+\end{document}
