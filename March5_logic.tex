@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 5, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Logic proof verification - Hoare
+
+I'm working on a Hoare logic proof but am having some difficulty:  Here is the problem:
+
+    All variables are real:
+    {TRUE}
+        if a<b then
+        c := a;
+        a := b;
+        b := c
+    end if
+    	{b <= a}
+
+
+I think that I have to start with the assignment rule.  So perhaps something like this to start:
+
+    {c<=a}b := c {b<=a} -- by the assignment rule
+
+I'm pretty confused by Hoare logic in general though.  I can provide a complete example though:
+
+        {x > 0}
+         i := j^2
+         n := sqrt(i)
+        {n > 0}
+   
+        1. { √i > 0} n:=√i {n > 0} (Assignment rule)
+        2. i > 0 →  √i > 0 [Side condition]
+        3. {j^2 > 0} i:=j^2 {i > 0} (Assignment rule)
+        4. {j^2 > 0} i:=j^2 {√i > 0} (e)2,3 (weaken post condition using lines 2 and 3)
+        5. {j^2 > 0} i:=j^2 ; n:=√i {n > 0} (Compound statement rule using line 4 and 1)
+        6. j > 0 → j^2 > 0 [Side condition]
+        7. {j > 0} i:=j^2 ; n:=√i {n > 0} (i)6,5 (strengthen precondition using lines 6 and 5)
+\section{My Solution}
+Yes, you'll have to show that if the if condition does not hold, then you have the logical conclusion(which follows trivially in this case).
+Next, for the if statements. you'll have to work backwards. Your first step is correct, start from $ b\leq a  $, when you see $b=c$, replace b by c to have $ c\leq a  $, then you have the same steps for the next two assignments as you go upwards from $ c\leq a  $. When you are finished moving through the assignments, you'll then need to show that $a<b$ implies what you have previously from moving up $3$ assignments.
+\end{document}

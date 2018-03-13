@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 2, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Finding the Intersection Value of a Linear Equation and a Power Function with a Negative Exponent
+
+Real-life scenario, not theory, homework, etc. My math is so rusty it's basically powder at this point. No need to beat me up; I am already beating myself up for not understanding this very simple problem.
+
+I want to find where a power function line and a linear line intersect. I know the answer is about `1.15243535589047` but I want to know how to do this with simple pen and paper (so-to-speak).
+
+Solving for x: $-4.5657x + 265.58 = 300x^{-1}$
+
+[![xy scatter][1]][1]
+
+**My thought process**:
+
+The place where the two lines intersect is where the $x$ in the linear equation equals the $x$ in the power equation. Or, the linear equation minus the power equation should equal zero.
+
+**My attempt**:
+
+\begin{align}
+-4.5657x + 265.58 = \frac{300}{x^1}
+&\implies \frac{x^1}{1} (-4.5657x + 265.58) = \frac{300}{x^1} \cdot \frac{x^1}{1} \\
+&\implies x^1(-4.5657x + 265.58) = 300 \\
+&\implies -4.5657x^2 + 265.58x = 300 \\
+&\implies -4.5657x^2 + 265.58x -300 = 0.
+\end{align}
+
+**Now to test**:
+
+If I plug in $1$ for $x$, I get $-38.9857$. If I plug in $1.15243535589047$, I get $0.0000425483196977439$. Since this number is very close to zero, I take that to mean $1.15$ is the $x$ value where both lines intersect (roughly). But I had to use solver or an optimizer function to figure this out. 
+
+**My question**:
+
+**How do I take these two equations and set them up so the output will tell me that $x = 1.15$** ? I guess I'm saying I want to find where the two equations equal the same number.
+
+  [1]: https://i.stack.imgur.com/XK79c.png
+\section{My Solution}
+$x$ is definitely non-zero, this means your steps in setting up the quadratic is correct, which is multiplying both sides by $x$.
+You don't really have to plug in values to test and you can instead use the quadratic formula for solving questions in the form \begin{align}ax^2+bx+c=0\end{align}
+The formula is given as:
+\begin{align}\frac{-b\pm\sqrt{b^2-4ac}}{2a}\end{align}
+Plugging in the values for a, b, c and you should get:
+$x=57.016082234325$ and 
+$x=1.1524351890714$
+\end{document}
