@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 18, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Am I on the right track to proving this statement about composite function?
+
+Let $S = \{1,2,3,4\}$. Let $F$ be the sets of all functions from $S$ to $S$.
+
+Now I think this statement is true:
+
+$\forall f \in F , \exists g\in F$ so that $(g \circ f)(1) =2$
+
+I suppose $f \in F$, and I need to show that $\exists g\in F$ so that $(g \circ f)(1) = 2$
+
+Do I just make an example  of $g$ so that $(g \circ f)(1) = 2$ ?
+
+Like $f(1) = y$  and then  $g (y)=2 ?
+
+\section{My Solution}
+You could simply design a function $g$ such that $g(x)=2$ for all $x\in S$. Now since $f\in F$, we know $f(1)\in S$, hence the composition is 2. As f is arbitrary, we have the desired result.
+\end{document}

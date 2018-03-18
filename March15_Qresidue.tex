@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 15, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Help regarding quadratic residue
+
+Is solving the congruence $x^2 \equiv 1 (\mod n)$ equivalent to solving $x \equiv 1(\ mod p)$ , $x \equiv -1 (\mod q)$  and $x \equiv -1(\ mod p)$ , $x \equiv 1 (\mod q)$  ? Here $n=pq$ where $p,q$ are primes.
+I am not considering the trivial solutions  $1,-1$
+
+\section{My Solution}
+Solving for $x^2\equiv1 \mod n$ is the same as solving for the system  $x^2\equiv1 \mod p$ and  $x^2\equiv1 \mod q$ by CRT. So for each of the 2 congruences, the polynomial is a degree 2, so each of the congruence $x^2-1\equiv0 \mod p$ and $x^2-1\equiv0 \mod q$ has at most 2 roots. But we know $1,-1$ are roots, so they are the only roots. This means we have 2 solutions for each congruence, and by CRT, we could generate 4 solutions to the original question. Namely, those 4 that you listed: $x \equiv 1(\ mod p)$ , $x \equiv -1 (\mod q)$  and $x \equiv -1(\ mod p)$ $x \equiv 1 (\mod q)$
+\end{document}

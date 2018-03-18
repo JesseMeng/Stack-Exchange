@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 16, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Counting: passwords
+
+Sorry if this has been beaten to death. 
+
+A password can contain capital and lowercase letters, digits, and underscores.
+
+$63^8$ total passwords, correct?
+
+
+If we add the stipulation that the first character cannot be a digit-- why wouldn't the number of illegal passwords be $10*63^7$, resulting in $63^8-10*63^7$ legal passwords? 
+\section{My Solution}
+Your logic is correct for 8 digit passwords. For each digit, you could have $26*2+10+1=63$ choices. So, without restrictions,total number of passwords would be $63^d$ where d is the number of characters in the password. If the first character cannot be a digit, then we would only have $53$ choices for the first character, which then yields $53*63^{d-1}$ choices.
+\end{document}

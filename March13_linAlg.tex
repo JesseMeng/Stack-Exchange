@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 13, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Let $T:V → V$ be a linear transformation where $V$ is finite dimensional.
+
+Let $T:V → V$ be a linear transformation where $V$ is finite dimensional. Show that exactly one of (i) and (ii) holds:  
+(i) $T(v)=0$ for some $v ≠ 0$ in $V$ ;  
+(ii) $T(x)=v$ has a solution $x$ in $V$ for every $v$ in $V$
+
+Not sure how to answer this, I'll get any help I can get. Thanks in advance!
+\section{My Solution}
+Consider the dimension of the null space for T. The dimension of nullspace is either $0$ or non-zero. 
+
+If it is non-zero. By def, i) is satisfied. Then we know the rank of $T$ is smaller than $dim(V)$. So $T(x)$ has smaller dimension than $V$, this means ii) is not satisfied. 
+
+If nullity is zero. Then by def, i) is not satisfied and $T$ is invertible. Hence, it means the dimension of $T(x)$ is equal to $dim(V)$ and this implies ii) is satisfied. 
+
+Hence in every case, exactly one condition is satisfied.
+\end{document}
