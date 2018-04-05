@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{April 5, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Proving a sequence by induction
+
+Trying to prove by induction in a non-math course and I feel like I'm getting the steps but I'm just stuck on the math. 
+
+$$G_1 = 1$$
+
+$$G_2 = 1$$
+
+$$G_n = 2G_{n−1} + 3G_{n−2}, \quad n \geq 3$$
+
+Using mathematical induction, prove that for every $n ≥ 1$, $G_n ≤ 3^n$.
+
+I used $G_1$ as my base case, since it’s given. 
+
+My induction hypothesis is to assume $G_n \leq 3^n$ for some arbitrary $n$.
+Thus I should prove $G_{n+1}\leq  3^{n+1}$.
+
+Using the given formula I simplified down to $2G_n + 3G_{n-1} ≤ 3^n3$.
+
+I feel like I'm pretty much there, but I just don't see how to solidify the proof from here. Any hints would be greatly appreciated!
+\section{My Solution}
+$$G_1 = 1$$
+
+$$G_2 = 1$$
+
+$$G_n = 2G_{n−1} + 3G_{n−2}, n \geq 3$$
+
+"My induction hypothesis is to assume $G_n \leq 3^n$ for some arbitrary $n$.
+Thus I should prove $G_{n+1}\leq  3^{n+1}$.
+
+Using the given formula I simplified down to $2G_n + 3G_{n-1} ≤ 3^n * 3$."
+
+Now, notice this means $$G_{n+1} = 2G_{n} + 3G_{n−1}\leq3^n*3=3^{n+1}$$ You have your desired result.
+\end{document}

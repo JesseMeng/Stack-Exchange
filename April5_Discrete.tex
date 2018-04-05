@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{April 5, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : $n$-th element in a pattern of repeated elements of a set
+
+If I have a set of letters $\{a,b,c\}$ which will repeat five times, i.e.
+$$a,a,a,a,a,b,b,b,b,b,c,c,c,c,c,a,a,a,a,a,\cdots,$$
+how can I determine what letter will be in a given position, i.e. $168$?
+ 
+\section{My Solution}
+You know one cycle of the pattern is of length $15$, since you would have {aaaaabbbbbccccc}, then repeat. Given a position, you can perform modulo $15$ to find the local index of the respective pattern you are on. For example, $168\equiv 3 \mod 15$, so you would have the third letter in the pattern, which is $'a'$.
+\end{document}

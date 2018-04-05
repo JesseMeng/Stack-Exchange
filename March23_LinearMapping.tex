@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 23, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Prove that there does not exist a linear map
+
+I have to prove that there does not exist a linear map from $\mathbb{R}^5$ to $\mathbb{R}^2$ whose kernel is $\left\{\left(\begin{matrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{matrix}\right) | x_1 = 3x_2 \space and \space x_3 = x_4 = x_5 \right\}$
+
+but I do not know where to start
+\section{My Solution}
+Suppose there actually exists a linear map T. We know $ker(T)+rank(T)=5$ by rank-nullity theorem. Now $rank(T)\leq2$, so $ker(T) \geq 3$. Now what is the dimension of the kernel given? Is it greater or equal to 3? Do you see a contradiction?
+\end{document}

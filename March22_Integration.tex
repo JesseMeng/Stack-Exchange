@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{March 22, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Partial Fractions in Integration
+
+[![enter image description here][1]][1]
+
+
+[![enter image description here][2]][2]
+
+
+  [1]: https://i.stack.imgur.com/WMPn5.png
+  [2]: https://i.stack.imgur.com/NqpSO.png
+
+I did my very best to do and redo by equation over and over, yet I cant get beyond this result. I'm not sure if the answer given at the back of my book is wrong or I am. Please help!!!!!!!!!.
+\section{My Solution}
+Up until you have $$\lim_{b\to\infty}\frac{1}{3}\int_{0}^{b}\frac{2}{2x+1}-\frac{1}{x+2}dx$$Your solution was correct.Then you would get$$\lim_{b\to\infty}\frac{1}{3}(\ln(\frac{2b+1}{b+2})+\ln2)$$ So a nuisance is the plus instead of minus. But that's not what changed your answer, I think you  forgot to add the $\ln2$ resulting from the lower bound in the integral. If you add both of the $\ln2$s, you would get the desired answer, $\frac{2\ln2}{3}$
+\end{document}
