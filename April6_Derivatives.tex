@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{April 6, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Difference between derivatives and limits?
+
+Hey I have a small question - as I am getting into derivatives, I was shown how to take the limit as $h$ approaches $0$ and to create an equation. Additionally, we were told to never forget using the limit.
+
+Then how come when we just have a function and we take the derivative of that function, we don‘t use limits?
+
+Thanks in advance hopefully I could explain more or less what I mean....
+\section{My Solution}
+By definition, a real function $f$ is differentiable at point $a\in R$ if and only if f is defined on some open interval I containing a and $\lim_{h\to0}\frac{f(a+h)-f(a)}{h}$ exists, in this case we call this limit the derivative of $f$ at $a$. So, the value of the derivative is a limit. The rules we use that apply to functions directly are just results that we have proven but everything goes back to the limit in the fundamental perspective. In addition, you could also see that there are some underlying assumptions that need to be satisfied for this definition to work ($f$ is defined on the open interval containing a, $a\in R$,etc..) This means when you apply the rules, you must also be aware of the assumptions, although definitions and rules could vary(consider one side derivatives), the fundamentals don't change.
+\end{document}

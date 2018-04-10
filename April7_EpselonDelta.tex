@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{April 7, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Showing that $\lim_{x \to -\infty}(x+{1\over x}) = -\infty$
+
+My attempt. I' not sure about this, but I think the definition for this limit will be: 
+
+$\forall M <0 \space \exists N < 0, \space x < N \Rightarrow f(x) < M$
+
+We start off knowing that $x < N$ $\Rightarrow$ $x^2 > N^2\Rightarrow {1\over x^2 } + 1 < {1 \over N^2} + 1 \Rightarrow x({1\over x^2 } + 1) < N({1 \over N^2} + 1)$. Now, since ${1\over N^2} + 1 > 1$ and $N < 0$, we have that $N({1\over N^2} + 1 ) < N$. Thefore, $x({1\over x^2} + 1) < N$, which mean that we will choose N = M in our proof.
+
+Proof:
+
+Pick N = M. Since $x < N \Rightarrow x({1\over x^2 } + 1) < N({1 \over N^2} + 1)< N = M$, as required. 
+
+Is this correct?
+\section{My Solution}
+You wanted to evaluate the limit from first principles, so
+
+Yes, you want to prove :
+
+$\forall M <0,\space \exists N < 0, \space x < N \Rightarrow f(x) < M$
+
+
+"We start off knowing that $x < N$ $\Rightarrow$ $x^2 > N^2\Rightarrow {1\over x^2 } + 1 < {1 \over N^2} + 1$" This is correct.
+
+$\Rightarrow x({1\over x^2 } + 1) < N({1 \over N^2} + 1)$.
+
+This is wrong! Consider $x=-0.5,N=-0.4,x<N$, but 
+
+$\Rightarrow x({1\over x^2 } + 1)=-2.5 > N({1 \over N^2} + 1)=-2.9!$
+
+You are making an invalid comparison here.
+Instead you can simply do this:
+
+Proof:
+
+Pick N = M. Since $x < N,x^2>xM$,
+
+$x^2+1>x^2>xM$, since obviously $x\neq 0$,
+
+$f(x)=x+\frac{1}{x}<x<M$, as required.
+
+
+\end{document}

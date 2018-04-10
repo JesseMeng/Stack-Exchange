@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{April 8, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : How many integers in the range satisfy a given congruence?
+
+Specifically how many integers $x$ in the range $1 ≤ x ≤ 60$ satisfy $21x ≡ 24\ (mod\ 60)$? And how many integers $a$ are there in the range $1 ≤ a ≤ 74$ for which the equation $x^2 ≡ a\ (mod\ 37)$ is soluble?
+
+I have the solutions to be $3$ and $38$ respectively but not too sure how they came up with those answers.
+
+For the first one, I believe it's because $21x ≡ 24\ (mod\ 60) \implies 3\cdot7x \equiv 3\cdot8\ (mod\ 60) \implies 7\cdot8x\ (mod\ 20) \implies x \equiv 4\ (mod\ 20)$
+Then looking in the range from $1\ to\ 60$, $60/20 = 3$ to give us 3 integers.
+
+Not sure about the second..
+
+ 
+\section{My Solution}
+For the second one, it's basically asking how many quadratic residues are in $Z_{37}$. Since 37 is prime, there must be exactly $\frac{p-1}{2}$ residues and non-residues in the range from $1-36$, now, 37 is a trivial residue, so you would get $18+1=19$ residues in the range $1\leq a\leq37$ As we are in modulo 37, the range $38\leq a \leq74$ behaves similarly as $1\leq a\leq37$. So  you would get $19*2=38$ residues in total.
+\end{document}

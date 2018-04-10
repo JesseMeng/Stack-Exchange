@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{April 6, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Find volume of the cone using integration
+
+A cone can be though as a concentration of circles of radius tending to $0$ to radius $r$ and there will be infinitely many such circles within a height of $h$ units. 
+
+Area of one such circle of radius $r$ will be $\pi r^2$. 
+Volume of cone = sum of all such circles but that will be $\int_{0}^{r} \pi x^2 \text {d}x$ and that wouldn't be correct as the volume is $\pi r^3 h /3$ and not that. I rather find that $$\int_{0}^{h}\left(\int_{0}^{r} \pi x^2 \text {d}x\right)$$ works.
+Why?
+\section{My Solution}
+Up until you have The volume that you have is not the sum of all those circles, you are actually summing over all those infinite thin disks that have the $2D$ surface resembling the circle. The volume of a disk is the circle's area multiplied by the width of the disk. So, $V_{disk}=\pi r^2dx$ where $dx$ is your infinitely thin width of the disk and r is varying radius of the disk. As you want the entire sum of the volume of the disks, you would have $\int_{0}^{h}\pi r(x)^2dx$ where $h$ is the height of the cone, our infinite widths sum up to the height of the cone. Notice this is not your formula because the upper limit on the integrand and the thin width of disk are different variables from $r$. 
+
+To add on, if we let R denote the radius of the cone. We see as we are integrating along the cone, the angle does not change, so in our integration, we always have $\frac{x}{r}=\frac{h}{R}$. Notice h and R are constant properties of the cone where as $x$ and $r$ are variables that change in our integration along the cone. Therefore,$r(x)=\frac{Rx}{h}$ you can substitute in to get $\int_{0}^{h}\pi {(\frac{Rx}{h})}^2dx=\pi \frac{R^2}{h^2} \int_{0}^{h} x^2dx=\frac{\pi R^2h}{3}$
+\end{document}

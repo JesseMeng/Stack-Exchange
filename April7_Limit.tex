@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{April 7, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Evaluate $ \lim_{x\to\infty}\frac{\ln(1+e^x)}{x}$
+
+I have intuitively guessed that the answer should be 1 as $x\to +\infty$. How do I formally prove this? Also how do I evaluate the limit as $x\to -\infty $.
+
+UPDATE: Based on the answers below, I have managed to do the following.
+$$
+\lim_{x\to\infty} \frac{\ln (1+e^x)}{x} \\
+= \lim_{x\to\infty} \frac{\ln e^x(\frac{1}{e^x}+1)}{x} \\
+= \lim_{x\to\infty} \frac{x +\ln (\frac{1}{e^x}+1)}{x} \\
+= \lim_{x\to\infty} 1+ \ln (1+\frac{1}{e^x})^\frac{1}{x} \\
+$$
+How do I proceed proceed from here?
+\section{My Solution}
+Since you would get $\frac{\infty}{\infty}$
+
+You can use l'hopital's rule:
+
+ $ \lim_{x\to\infty} \frac{\ln(1+e^x)}{x}=\frac{e^x}{1+e^x}=\frac{1}{e^{-x}+1}=1$
+
+Formal proof of this relies on the proof of this case for l'hopital's rule.
+
+Add on: for $-\infty$, solution should be trivial, treat $-\infty$ as an extended real number and substitute.
+\end{document}

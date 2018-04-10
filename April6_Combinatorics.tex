@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{April 6, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Pascal's triangle.
+
+Is there an intuitive definition for the symmetry that occurs in Pascal's triangle? If $n$ in $\binom{n}{k}$ is odd, there is indeed an exact reflection along the center column (which divides the triangle into halves of $n-2$ parts each, and each half contains exactly the same elements in reverse order with respect to one another. **This makes sense to me.**
+
+
+**However,** if $n$ is even, there is still a sort of additive? symmetry, where if you take the alternating sum of the binomial coefficients, the result is zero. This second fact is what prompted me to ask the question, as it seemed very mysterious...
+
+ Suppose n = 6, then 1 - 6 + 15 - 20 + 15 - 6 + 1 = 0, which seems very strange, as the "halves" are **not** broken evenly *and* contain **no** elements in common. But it may be because I'm missing something.
+
+With regards to @Jesse Meng's answer, 
+
+Interestingly, that second formula is precisely what I was trying to understand (intuitively). I understand and can apply the formula. However, I am missing the intuition with regards to why selecting x = 1 and y = -1 signifies combinatorially the alternating sum . Is there no simple way to convey it? Is there even an intuition? Should I completely reconsider my frame?
+\section{My Solution}
+From the binomial formula, you would have $$(1+1)^n=\sum_{k=0}^{n}\binom{n}{k}$$
+Similarly, you have $$(1-1)^n=\sum_{k=0}^{n}\binom{n}{k}(-1)^k$$
+Notice $n$ does not need to be even here, so you have your desired result. So, the intuition here lies within the intuition of the binomial expansion formula itself - I am certain there is a rich number of resources that can expand on the intuition of this formula.
+\end{document}

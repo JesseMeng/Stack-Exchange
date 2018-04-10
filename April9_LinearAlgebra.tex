@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{April 9, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title : Intersection between line passing through 2 points and line passing through a point in the direction
+
+I am stuck on this question during my exam review:
+
+Let L1 be the line passing through $$P(-1,3,-2), Q=(5,-3,10).$$  Let L2 be the line passing through $$(4,0,3)$$ in the direction of $$v=
+    \begin{bmatrix}
+    3\\
+    -1\\
+    1\\
+    \end{bmatrix}.
+$$
+Do the lines intersect?  If so, find their point of intersection.
+
+Attempt:
+I first found the normal vector of L1, which equals **n**=(6,-6,12).  Then, using the coordinates from P, I created a system of equations as follows: $$-1+6t = 4+3s$$
+
+$$-3-6t=-s$$
+
+$$-2+12t=3+s$$
+
+and found that they do not intersect.  Is this correct? 
+\section{My Solution}
+Yes, your answer and your system of equations is correct. However, a line has infinitely many normal vectors in $R^3$, you meant $(6,-6,12)$ is the directional vector of $L1$.
+\end{document}
