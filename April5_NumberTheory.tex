@@ -1,2 +1,37 @@
-$
-$
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Stack Exchange Answers}
+\author{Jesse Meng }
+\date{April 5, 2018}
+
+\begin{document}
+
+\maketitle
+
+\section{Original Post}
+Title :Reducing modulo $15841$
+
+I want reduce the following congruence
+
+>$17^{15842}\pmod{15841}$.
+
+My first stab at this was to use Fermat's Little Theorem, but then I realized that $15841$ is *not* a prime number. In fact,
+
+$$15841 = 217 \cdot 73.$$
+
+After some independent research, I learned that $15841$ is actually a [Carmichael Number](https://en.wikipedia.org/wiki/Carmichael_number), $561$ being the smallest of the list. Thus, I know that...
+
+>A *Carmichael Number* is a composite number $n$ with the property that $a^n \equiv a\pmod n$ for all integers $1 < a < n.$
+
+Initially, I believed that the answer was $17\pmod{15841}$, but it turns out that the answer is $17^2$ mod ($15841).$ If so, why is this true?
+ 
+\section{My Solution}
+For any Carmichael Number $n$,
+
+$a^n \equiv a$ (mod $n)$ for all integers $1 < a < n$, therefore, since $1<17<15841$ and $15841$ is Carmichael:
+
+$17^{15841} \equiv 17$ (mod $15841)$ multiplying both sides of the equality by $17$, we arrive at the obvious answer:
+
+$17^{15842} \equiv 17^2$ (mod $15841)$
+\end{document}
